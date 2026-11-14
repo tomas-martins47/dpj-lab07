@@ -21,7 +21,8 @@ public class PlayerController : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        rb.constraints = RigidbodyConstraints.FreezeRotationZ | 
+        rb.constraints = RigidbodyConstraints.FreezeRotationZ |
+                         RigidbodyConstraints.FreezeRotationY |
                          RigidbodyConstraints.FreezeRotationX;
         spawnPosition = transform.position;
         playerFeedback = GetComponent<PlayerFeedback>();
